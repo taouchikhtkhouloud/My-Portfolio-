@@ -9,6 +9,13 @@
 
 
 }
+body.dark{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text--black-700:#e9e9e9;
+}
 *{
     margin:0;
     padding:0;
@@ -42,6 +49,10 @@ body{
     border-right: 1px solid var(--bg-black-50);
 
 }
+.navbar.open{
+    left: 0;
+
+}
 .navbar .logo a {
     color: var(--text-black-900);
     font-weight: 700;
@@ -62,7 +73,7 @@ body{
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
-   background-color: #e8dfec;
+   background-color: var(--skin-color);
 }
 .navbar.logo a::before{
     content: '';
@@ -101,6 +112,7 @@ body{
    align-items: center;
    justify-content: center;
 }
+
 .navbar .nav-toggler span{
     height: 2px;
     width:18px ;
@@ -632,4 +644,50 @@ h3.my-profession{
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
+}
+@media (max-width:1199px){
+    .navbar{
+        left: -270px;
+    }
+    .navbar .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+    .main-content{
+        padding-left: 0;
+    }
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px){
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .home .home-img{
+        display: none;
+    }
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+   
+}
+@media (max-width:767px){
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
