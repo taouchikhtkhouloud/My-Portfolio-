@@ -58,8 +58,10 @@
                                 </ul>
                               
                             <h3 class="hello">Hello, my name is <span class="name">Khouloud Touchikht</span> </h3>
+                            <h3 class="hello">
+                                I'm <span class="name">Software engineering student </span> </h3>
                             <h3 class="my-profession">
-                                I'm a <span class="typing">Software engineering student </span> </h3>
+                                I want to be <span class="typing">Software engineering student </span> </h3>
                                 <p>Hi, I’m an Software Engineering student at INPT (National Institute of Posts and Telecommunications). I ❤️ love programming languages and design, but I also really enjoy reading books about other domains. 📚</p>
                            <a href="#contact" class="btn hire-me">Hire me </a>
                         </div>
@@ -385,14 +387,14 @@
                             <h2>Contact Me</h2>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15">Hava you any questions?</h3>
+                    <h3 class="contact-title padd-15">Have you any questions?</h3>
                     <h4 class="contact-sub-title padd-15">I'm at your services</h4>
                     <div class="row">
                         <div class="contact-info-item padd-15">
                             <div class="icon">
                                 <i class="fa fa-phone"></i>
                             </div>
-                            <h4>Call us on</h4>
+                            <h4>Call me on</h4>
                             <p>+212 777 309197</p>
                         </div>
                         <div class="contact-info-item padd-15">
@@ -417,40 +419,40 @@
                             <a href="https://github.com/taouchikhtkhouloud"><p>taouchikhtkhouloud</p></a>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15">send me an email</h3>
-                    <h4 class="contact-sub-title padd-15">I'm very resposive to messages</h4>
+                    <h3 class="contact-title padd-15">Send me an email</h3>
+                    <h4 class="contact-sub-title padd-15">I'm very responsive to messages</h4>
                     <div class="row">
                         <div class="contact-form padd-15">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                                        <input type="text" id="from_name" class="form-control" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="email">
+                                        <input type="email" id="email" class="form-control" placeholder="email">
                                     </div>
                                 </div>
                             </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="subject">
+                                            <input type="text" id="subject" class="form-control" placeholder="subject">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <textarea name="" id="" class="form-control" placeholder="message"></textarea>
+                                            <textarea name="" id="message" class="form-control" placeholder="message"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <button type="submit" class="btn">Send Message </button>
+                                            <button type="submit" id="btn" onclick="SendMail()" class="btn">Send Message </button>
                                         </div>
                                     </div>
                                 </div>
@@ -483,6 +485,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <script src="jsScript/script.js"></script>
 <script src="jsScript/style-switcher.js"></script>
-
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("vikUhk0IAJZYNt-VT");
+   })();
+</script>
 </body>
 </html>

@@ -28,3 +28,30 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
         aside.classList.toggle("open");
         
     }
+function SendMail(){
+    var params = {
+        from_name : document.getElementById("from_name").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    }
+    emailjs.send("service_9079pwk", "template_riw1k3f", params).then(function(res){
+        alert("Success!"+ res.status);
+    });
+}
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function handleClick(event) {
+  
+  event.preventDefault();
+
+  document.getElementById('from_name').value='';
+  document.getElementById("email").value='';
+  document.getElementById('subject').value='';
+  document.getElementById('message').value="";
+  
+ 
+  
+
+  
+  
+});
