@@ -35,6 +35,19 @@ body{
     box-sizing: border-box;
 }
 .navbar{
+    width: 100%;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 80px;
+    z-index: 10;
+    
+    border-bottom: 1px solid var(--bg-black-50);
+
+}
+.navbar.open{
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
@@ -49,15 +62,37 @@ body{
     border-right: 1px solid var(--bg-black-50);
 
 }
-.navbar.open{
-    left: 0;
+.navbar.open .logo{
+    position: absolute;
+    top: 70px;
+    font-size: 30px;
+    text-transform: capitalize;
+   background-color: var(--skin-color);
+}
+.navbar.open .nav{
+    margin-top: 50px;
+    display: block;
+    margin-left: 0;
 
+}
+.navbar.open .nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+.navbar.open .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--bg-black-50);
 }
 .navbar .logo a {
     color: var(--text-black-900);
     font-weight: 700;
    
     padding: 15px 20px;
+    margin-top: -5px;
     letter-spacing: 5px;
     position: relative;
 
@@ -70,7 +105,7 @@ body{
 
 .navbar .logo{
     position: absolute;
-    top: 50px;
+    top: 10px;
     font-size: 30px;
     text-transform: capitalize;
    background-color: var(--skin-color);
@@ -139,19 +174,21 @@ body{
     left: 0;
 }
 .navbar .nav{
-    margin-top: 50px;
-
+    margin-left: 400px;
+    display: flex;
 }
 .navbar .nav li {
     margin-bottom: 20px;
-    display: block;
+    display: flex;
+    flex: 0 0 20%;
 }
 .navbar .nav li a{
     font-size: 16px;
     font-weight: 600;
-    display: block;
+    
+   
     color: var(--text-black-900);
-    padding: 5px 10px;
+    
     border-bottom: 1px solid var(--bg-black-50);
 }
 .navbar .nav li a.active{
@@ -160,9 +197,7 @@ body{
 .navbar .nav li a i{
     margin-right:15px ;
 }
-.main-content{
-    padding-left: 270px;
-}
+
 .hidden{
     display: none !important;
 }
@@ -170,19 +205,22 @@ body{
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    
-    padding: 0 30px;
-    
+    width: 100%;
+ 
+    margin-left: 0;
+    margin-right: 0;
     opacity: 1;
 }
 .section .container{
     padding-top: 60px;
     padding-bottom: 70px;
+   
 }
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
    margin-bottom: 60px;
+   margin-top: 70px;
    
 }
 .section-title h2{
@@ -220,6 +258,7 @@ ul{
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
+    margin-top: 70px;
 }
 .home .home-info{
     flex: 0 0 60%;
@@ -647,7 +686,13 @@ h3.my-profession{
 }
 @media (max-width:1199px){
     .navbar{
-        left: -270px;
+        left: -570px;
+        
+    }
+
+    .navbar .nav{
+       display: none;
+      
     }
     .navbar .nav-toggler{
         display: flex;
@@ -691,3 +736,81 @@ h3.my-profession{
         max-width: 100%;
     }
 }
+.animation-area {
+    background: var(--skin-color);
+    background: -webkit-linear-gradient(to top, var(--skin-color), var(--bg-black-50));
+    background: linear-gradient(to top,var(--skin-color), var(--bg-black-50));
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+  }
+  .box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+  }
+  .box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+  .box-area li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+  }
+  .box-area li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+  }
+  .box-area li:nth-child(4) {
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+  .box-area li:nth-child(5) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+  }
+  .box-area li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+  }
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
