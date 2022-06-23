@@ -603,10 +603,16 @@ h3.my-profession{
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    
+}
+.portfolio .portfolio-item-inner:hover{
+    transform: scale(1.2);
 }
 .portfolio .portfolio-item-inner .portfolio-img img{
-    width: 100%;
+    
     display: block;
+    width: 100%;
+    height: 300px;
 }
 .contact-title{
     color: var(--skin-color);
