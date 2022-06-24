@@ -67,7 +67,6 @@ body{
     top: 70px;
     font-size: 30px;
     text-transform: capitalize;
-   background-color: var(--skin-color);
 }
 .navbar.open .nav{
     margin-top: 50px;
@@ -108,7 +107,7 @@ body{
     top: 10px;
     font-size: 30px;
     text-transform: capitalize;
-   background-color: var(--skin-color);
+   
 }
 .navbar.logo a::before{
     content: '';
