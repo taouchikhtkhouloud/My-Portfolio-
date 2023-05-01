@@ -20,7 +20,7 @@ const nav = document.querySelector(".nav"),
         })
     }
 const navTogglerBtn = document.querySelector(".nav-toggler"),
-    aside = document.querySelector(".navbar");
+    aside = document.querySelector(".navbar1");
     navTogglerBtn.addEventListener("click", () => {
         asideSectionTogglerBtn();
     })

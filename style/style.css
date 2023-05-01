@@ -34,7 +34,12 @@ body{
 ::before,::after{
     box-sizing: border-box;
 }
-.navbar{
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.navbar1{
     width: 100%;
     background: var(--bg-black-100);
     position: fixed;
@@ -49,7 +54,7 @@ body{
  
 
 }
-.navbar.open{
+.navbar1.open{
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
@@ -64,31 +69,33 @@ body{
     border-right: 1px solid var(--bg-black-50);
 
 }
-.navbar.open .logo{
+.navbar1.open .logo{
     position: absolute;
     top: 70px;
     font-size: 30px;
     text-transform: capitalize;
 }
-.navbar.open .nav{
+.navbar1.open .nav{
     margin-top: 50px;
     display: block;
     margin-left: 0;
 
 }
-.navbar.open .nav li {
+.navbar1.open .nav li {
     margin-bottom: 20px;
     display: block;
+    text-decoration: none;
 }
-.navbar.open .nav li a{
+.navbar1.open .nav li a{
     font-size: 16px;
     font-weight: 600;
     display: block;
     color: var(--text-black-900);
     padding: 5px 10px;
     border-bottom: 1px solid var(--bg-black-50);
+    text-decoration: none;
 }
-.navbar .logo a {
+.navbar1 .logo a {
     color: var(--text-black-900);
     font-weight: 700;
    
@@ -98,20 +105,20 @@ body{
     position: relative;
 
 }
-.navbar .logo a span{
+.navbar1 .logo a span{
   
     font-family:'Clicker Script', cursive ;
     font-size: 40px;
 }
 
-.navbar .logo{
+.navbar1 .logo{
     position: absolute;
     top: 10px;
     font-size: 30px;
     text-transform: capitalize;
    
 }
-.navbar.logo a::before{
+.navbar1.logo a::before{
     content: '';
     position: absolute;
     width: 10px;
@@ -122,7 +129,7 @@ body{
     left: 0;
 
 }
-.navbar.logo a::after{
+.navbar1.logo a::after{
     content: '';
     position: absolute;
     width: 20px;
@@ -134,7 +141,7 @@ body{
     left: 0;
 
 }
-.navbar .nav-toggler{
+.navbar1 .nav-toggler{
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
@@ -149,14 +156,14 @@ body{
    justify-content: center;
 }
 
-.navbar .nav-toggler span{
+.navbar1 .nav-toggler span{
     height: 2px;
     width:18px ;
     background: var(--skin-color);
     display: inline-block;
     position: relative;
 }
-.navbar .nav-toggler span::before{
+.navbar1 .nav-toggler span::before{
     content: '';
     height: 2px;
     width: 18px;
@@ -165,7 +172,7 @@ body{
     top: -6px;
     left: 0;
 }
-.navbar .nav-toggler span::after{
+.navbar1 .nav-toggler span::after{
     content: '';
     height: 2px;
     width: 18px;
@@ -174,16 +181,16 @@ body{
     top: 6px;
     left: 0;
 }
-.navbar .nav{
+.navbar1 .nav{
     margin-left: 400px;
     display: flex;
 }
-.navbar .nav li {
+.navbar1 .nav li {
     margin-bottom: 20px;
     display: flex;
     flex: 0 0 20%;
 }
-.navbar .nav li a{
+.navbar1 .nav li a{
     font-size: 16px;
     font-weight: 600;
     
@@ -192,11 +199,11 @@ body{
     
     border-bottom: 1px solid var(--bg-black-50);
 }
-.navbar .nav li a.active{
+.navbar1 .nav li a.active{
     color: var(--skin-color);
     border-bottom: 2px solid var(--skin-color);
 }
-.navbar .nav li a i{
+.navbar1 .nav li a i{
     margin-right:15px ;
 }
 
@@ -318,7 +325,7 @@ h3.my-profession{
     font-size: 20px;
     color: var(--text--black-700);
 }
-.btn{
+.btn1{
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
@@ -330,7 +337,7 @@ h3.my-profession{
     transition: all 0.3s ease;
     border: none;
 }
-.btn:hover{
+.btn1:hover{
     transform: scale(1.05);
 }
 
@@ -431,6 +438,47 @@ h3.my-profession{
     font-weight: 400;
     line-height: 40px;
 }
+.dropbtn {
+   
+    color:  var(--text-black-900);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
 .about .about-content .education
 {
     flex:0 0 50%;
@@ -515,6 +563,7 @@ h3.my-profession{
 }
 .service .service-item{
     margin-bottom: 30px;
+   
     flex: 0 0 33.33% ;
     max-width: 33.33%;
 }
@@ -523,6 +572,7 @@ h3.my-profession{
     border: 1px solid var(--bg-black-50);
     border-radius: 10px;
     padding: 30px 15px;
+    height: 300px;
     text-align: center;
     transition: all 0.35 ease;
 }
@@ -590,7 +640,7 @@ h3.my-profession{
     
 }
 .portfolio .portfolio-item-inner:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .portfolio .portfolio-item-inner .portfolio-img img{
     
@@ -675,7 +725,7 @@ h3.my-profession{
     padding: 0 50px;
 }
 @media (max-width:1199px){
-    .navbar{
+    .navbar1{
         left: -870px;
         
     }
@@ -684,11 +734,11 @@ h3.my-profession{
         margin-left: 20px;
     }
 
-    .navbar .nav{
+    .navbar1 .nav{
        display: none;
       
     }
-    .navbar .nav-toggler{
+    .navbar1 .nav-toggler{
         display: flex;
         left: 30px;
     }
@@ -926,4 +976,43 @@ h3.my-profession{
 }
 @keyframes orbit-counter-clock-wise {
 	from { transform: rotate(360deg); } to { transform: rotate(0deg); }
+}
+.portfolio-item {
+    position: relative;
+    /* add any other styles you need */
+}
+
+.portfolio-img {
+    position: relative;
+}
+.portfolio-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.github-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ddd;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item-inner:hover .portfolio-img::before {
+    opacity: 1;
+   
+}
+
+.portfolio-item-inner:hover .github-logo {
+    opacity: 1;
+    transform: scale(1.3);
 }
