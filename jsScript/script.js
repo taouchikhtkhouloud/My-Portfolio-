@@ -35,7 +35,7 @@ function SendMail(){
         message: document.getElementById("message").value
     }
     emailjs.send("service_9079pwk", "template_riw1k3f", params).then(function(res){
-        alert("Success!"+ res.status);
+        alert("Message sent successfuly!"+ res.status);
     });
 }
 const btn = document.getElementById('btn');
